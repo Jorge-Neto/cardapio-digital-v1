@@ -34,3 +34,57 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+--/--/--/--/--/--/
+
+MONTE UM COMBO COM 12 MARMITAS
+CONGELADAS DE 500GR
+SENDO 06 DE FRANGO E 06 DE CARNES VERMELHAS
+E GANHE DE BRINDE 1 MARMITA CARDAPIO
+
+ESCOLHA 2 OU MAIS UNIDADES DE
+CADA SABOR DA LISTA ABAIXO
+
+PIX OU DINHEIRO - R$ 157,00
+DEBITO OU CRÉDITO - R$ 165,00
+
+Não aceitamos cartões refeições e
+alimentação
+
+ACEITAMOS
+CARTÕES DE DÉBITO
+CARTÕES DE CRÉDITO
+PIX
+PICPAY
+ALELO
+VR
+TICKETVISA BEM
+SODEXO REFEIÇÃO
+
+
+
+OPÇÕES DE FEIJÃO:
+PRETO OU CARIOCA
+
+OPÇÕES DE ARROZ:
+BRANCO, PARBOILIZADO OU INTEGRAL
+
+AS MARMITAS VEM EM EMBALAGENS
+PARA 500GR, PODEM VARIAR O PESO
+PARA MAIS OU PARA MENOS
+DEPENDENDO DO SABOR ESCOLHIDO
+
+SÓ TRABALHAMOS POR ENCOMENDA,
+NÃO TEMOS A PRONTA ENTREGA
+
+PRAZO MINIMO PARA ENTREGA 2 a 3
+DIAS ÚTEIS recomendamos
+
+ENTREGA GRATIS
+
+PEÇA NOSSO CARDAPIO COMPLETO
+PARA MAIS OPÇÕES
+
+CONTATO:
+WHATS= 41 9 9681 1846
