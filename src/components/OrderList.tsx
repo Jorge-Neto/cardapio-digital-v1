@@ -16,7 +16,7 @@ export const OrderList = ({ list, isOpen, removeItem, toggleView }: Props) => {
     isOpen
     ?
     (
-      <div className="w-screen h-screen bg-white fixed overflow-y-scroll pt-3 px-3 pb-6">
+      <div className="w-screen h-dvh bg-white fixed overflow-y-scroll pt-3 px-3 pb-6">
         <div className="w-full"><button className="right-3 fixed shadow-md hover:shadow-lg hover:cursor-pointer py-2 bg-white hover:bg-gray-50 w-10 rounded-full text-red-400 font-black" onClick={() => toggleView(false)}>X</button></div>
         <ul className="mt-12">
         {list.map((item, index) => (
