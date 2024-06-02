@@ -10,7 +10,7 @@ import { orderReducer } from "@/reducers/orderReducer";
 import { FoodItem } from "@/types/FoodItem";
 import { UsageNotes } from "@/components/UsageNotes";
 import { OrderList } from "@/components/OrderList";
-import sumOfQuantities from "@/utils/sumOfQuantities";
+import { sumOfQuantities } from "@/utils/utils";
 
 export default function Home() {
   const [selectedFilter, setSelectedFilter] = useState("");
@@ -31,20 +31,17 @@ export default function Home() {
   };
 
   const addItemToOrder = ({ id, name }: FoodItem) => {
-    if (sumOfQuantities(order) <= 11) {
-      if (order.some((el) => el.id === id)) {
-        dispatch({
-          type: "edit",
-          payload: id,
-        });
-      } else {
-        dispatch({
-          type: "add",
-          payload: { id, name, quantity: 1 },
-        });
-      }
+    if (order.some((el) => el.id === id)) {
+      dispatch({
+        type: "edit",
+        payload: id,
+      });
+    } else {
+      dispatch({
+        type: "add",
+        payload: { id, name, quantity: 1 },
+      });
     }
-    if (sumOfQuantities(order) >= 11) setShowOrderList(true);
   };
 
   const removeItemFromCard = (id: number) => {

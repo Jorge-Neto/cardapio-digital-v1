@@ -5,11 +5,11 @@ type Props = {
 
 export const FilterButtons = ({ selected, selectCategory }: Props) => {
   return (
-    <div className="mt-2">
+    <div className="mt-2 grid grid-cols-2 w-full mb-2 max-w-md">
       <button
         type="button"
-        className={`text-sm mx-1 my-1 px-3 py-2 rounded-md shadow hover:bg-gray-50 text-black ${
-          selected == "frango" ? "bg-green-300 hover:bg-green-200" : ""
+        className={`text-sm mx-1 my-1 px-3 py-2 rounded-md shadow hover:shadow-md text-black ${
+          selected == "frango" ? "bg-green-500 hover:bg-green-400 text-white" : "hover:bg-gray-100"
         }`}
         onClick={() => selectCategory("frango")}
       >
@@ -17,8 +17,8 @@ export const FilterButtons = ({ selected, selectCategory }: Props) => {
       </button>
       <button
         type="button"
-        className={`text-sm mx-1 my-1 px-3 py-2 rounded-md shadow hover:bg-gray-50 text-black ${
-          selected == "carne-vermelha" ? "bg-green-300 hover:bg-green-200" : ""
+        className={`text-sm mx-1 my-1 px-3 py-2 rounded-md shadow hover:shadow-md text-black ${
+          selected == "carne-vermelha" ? "bg-green-500 hover:bg-green-400 text-white" : "hover:bg-gray-100"
         }`}
         onClick={() => selectCategory("carne-vermelha")}
       >
@@ -26,8 +26,8 @@ export const FilterButtons = ({ selected, selectCategory }: Props) => {
       </button>
       <button
         type="button"
-        className={`text-sm mx-1 my-1 px-3 py-2 rounded-md shadow hover:bg-gray-50 text-black ${
-          selected == "espaguete" ? "bg-green-300 hover:bg-green-200" : ""
+        className={`text-sm mx-1 my-1 px-3 py-2 rounded-md shadow hover:shadow-md text-black ${
+          selected == "espaguete" ? "bg-green-500 hover:bg-green-400 text-white" : "hover:bg-gray-100"
         }`}
         onClick={() => selectCategory("espaguete")}
       >
@@ -35,8 +35,8 @@ export const FilterButtons = ({ selected, selectCategory }: Props) => {
       </button>
       <button
         type="button"
-        className={`text-sm mx-1 my-1 px-3 py-2 rounded-md shadow hover:bg-gray-50 text-black ${
-          selected == "caldos-sopas" ? "bg-green-300 hover:bg-green-200" : ""
+        className={`text-sm mx-1 my-1 px-3 py-2 rounded-md shadow hover:shadow-md text-black ${
+          selected == "caldos-sopas" ? "bg-green-500 hover:bg-green-400 text-white" : "hover:bg-gray-100"
         }`}
         onClick={() => selectCategory("caldos-sopas")}
       >

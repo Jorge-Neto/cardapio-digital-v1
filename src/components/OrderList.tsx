@@ -1,8 +1,7 @@
-import { OrderListItem } from "@/types/OrderListItem";
 import React from "react";
+import { OrderListItem } from "@/types/OrderListItem";
 import { OrderItem } from "./OrderItem";
-import sumOfQuantities from "@/utils/sumOfQuantities";
-import sendMeWhatsapp from "@/utils/sendMe";
+import { sendMeWhatsapp, sumOfQuantities } from "@/utils/utils";
 
 type Props = {
   list: OrderListItem[];
@@ -29,14 +28,16 @@ export const OrderList = ({ list, isOpen, removeItem, toggleView }: Props) => {
           </li>
         ))}
         </ul>
-        {sumOfQuantities(list) == 12 &&
-        <button className="shadow-md hover:shadow-lg hover:cursor-pointer py-2 bg-teal-900 hover:bg-teal-800 w-full rounded-md mx-auto text-white font-black" onClick={() => sendMeWhatsapp(list)}>Enviar para o whatsapp</button>
+        {sumOfQuantities(list) >= 5 &&
+        <button className={`shadow-md hover:shadow-lg hover:cursor-pointer py-2 bg-emerald-500 hover:bg-emerald-400 w-full rounded-md mx-auto text-white font-black`} onClick={() => sendMeWhatsapp(list)}>Enviar para o whatsapp</button>
         }
       </div>
     )
     : (
       <div className="fixed bottom-10 left-50 w-full text-center ">
-        <button className="shadow-md hover:shadow-lg hover:cursor-pointer py-2 bg-red-400 hover:bg-red-500 w-9/12 rounded-md mx-auto text-white font-black" onClick={() => toggleView(true)}>{sumOfQuantities(list)} itens na sacola</button>
+        <button className="shadow-md hover:shadow-lg hover:cursor-pointer py-2 bg-red-500 hover:bg-red-400 w-9/12 rounded-md mx-auto text-white font-black" onClick={() => toggleView(true)}>
+          {sumOfQuantities(list)} itens na sacola
+          </button>
       </div>
     )
   );
