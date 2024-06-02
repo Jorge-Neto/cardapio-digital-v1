@@ -10,7 +10,7 @@ export const UsageNotes = () => {
           <li className="border-b mt-1">Entrega grátis</li>
           <li className="border-b mt-1">Embalagens para 500gr</li>
           <li className="border-b mt-1">Prazo minimo para entrega 2 a 3 dias úteis</li>
-          <li className="border-b mt-1">Não aceitamos cartões refeição e alimentação</li>
+          <li className="mt-1">Não aceitamos cartões refeição e alimentação</li>
         </ul>
       </div>
       <OnSaleConditions />

@@ -4,7 +4,7 @@ export const PricesTable = () => {
   return (
     <div>
       <ul className="list-disc my-2 p-1 text-sm bg-gray-50 rounded-lg">
-        <li className="w-72 my-3 px-3 border-b flex flex-row items-center justify-between">
+        <li className="w-72 m-3 border-b flex flex-row items-center justify-between">
           <div className="flex gap-2 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ export const PricesTable = () => {
           </div>
           <p className="ml-2">R$ 157,00</p>
         </li>
-        <li className="w-72 my-3 px-3 border-b flex flex-row items-center justify-between">
+        <li className="w-72 m-3 border-b flex flex-row items-center justify-between">
           <div className="flex gap-2 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

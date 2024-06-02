@@ -30,11 +30,11 @@ export const OnSaleConditions = () => {
 
           <div className="px-8 max-w-sm">
             <ol className="list-decimal my-2 mb-4 text-sm font-light">
-              <li>
-                Monte um combo com no mínimo 12 marmitas
+              <li className="mb-2">
+                Selecionar a partir de 12 marmitas
               </li>
               <li>
-                Escolha no mínimo 06 marmitas de cada tipo
+                Escolher no mínimo 06 marmitas de cada tipo
               </li>
             </ol>
           </div>

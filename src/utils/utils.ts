@@ -47,8 +47,8 @@ const getSecondBusinessDayFromToday = (): Date => {
 }
 
 export const replaceAll = (text: string, oldStr: string, newStr: string) => {
-  const escapedOld = oldStr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const regex = new RegExp(escapedOld, 'g');
+  let escapedOld = oldStr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  let regex = new RegExp(escapedOld, 'g');
   return text.replace(regex, newStr);
 }
 
@@ -57,7 +57,7 @@ export const sendMeWhatsapp = (orderList: OrderListItem[]): void => {
   let secondBusinessDay = getSecondBusinessDayFromToday();
   let formattedDate = replaceAll(secondBusinessDay.toLocaleDateString("pt-BR"), "/", "%2F")
 
-  let firstText = replaceAll(`https://wa.me/${phoneNumber}?text=Olá%2C gostaria de fazer um pedido de marmitas para ${formattedDate}. Segue a lista%3A `, ' ', '%20');
+  let firstText = replaceAll(`https://wa.me/${phoneNumber}?text=Olá%2C gostaria de fazer um pedido de marmitas para ${formattedDate}. Segue%3A `, ' ', '%20');
 
   let fullText = orderList.reduce((accumulator, item) => accumulator + replaceAll(`${item.quantity} de ${item.name.toLowerCase()}; `, ' ', '+'), firstText)
 
