@@ -53,6 +53,7 @@ export const replaceAll = (text: string, oldStr: string, newStr: string) => {
 }
 
 export const sendMeWhatsapp = (orderList: OrderListItem[]): void => {
+  if (sumOfQuantities(orderList) < 5) return;
   let phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER;
   let secondBusinessDay = getSecondBusinessDayFromToday();
   let formattedDate = replaceAll(secondBusinessDay.toLocaleDateString("pt-BR"), "/", "%2F")

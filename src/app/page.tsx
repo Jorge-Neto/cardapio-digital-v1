@@ -34,7 +34,10 @@ export default function Home() {
     if (order.some((el) => el.id === id)) {
       dispatch({
         type: "edit",
-        payload: id,
+        payload: {
+          id,
+          operation: "increment",
+        },
       });
     } else {
       dispatch({
@@ -45,12 +48,25 @@ export default function Home() {
   };
 
   const removeItemFromCard = (id: number) => {
+    let targetItem = order.find((el) => el.id === id);
+
     if (sumOfQuantities(order) > 0) {
-      dispatch({
-        type: "remove",
-        payload: id,
-      });
+      if (targetItem && targetItem?.quantity >= 2) {
+        dispatch({
+          type: "edit",
+          payload: {
+            id,
+            operation: "decrement",
+          },
+        });
+      } else {
+        dispatch({
+          type: "remove",
+          payload: id,
+        });
+      }
     }
+
     if (sumOfQuantities(order) <= 1) setShowOrderList(false);
   };
 

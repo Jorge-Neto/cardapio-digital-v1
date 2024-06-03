@@ -7,7 +7,10 @@ type AddAction = {
 
 type EditAction = {
     type: 'edit';
-    payload: number;
+    payload: {
+        id: number,
+        operation: string
+    };
 }
 
 type RemovedAction = {
@@ -21,22 +24,20 @@ export const orderReducer = (order: OrderListItem[], { type, payload }: ListActi
     switch (type) {
 
         case "add":
-            return [...order, payload]
+            return [...order, payload];
 
         case "edit":
+            let { id, operation } = payload
             return order.filter(item => {
-                if (item.id === payload) {
-                    item.quantity += 1;
+                if (item.id === id) {
+                    if (operation === "increment") item.quantity += 1;
+                    if (operation === "decrement") item.quantity -= 1;
                 }
                 return item;
-            })
+            });
 
         case "remove":
-            return order.filter(item => {
-                if (item.id === payload && item.quantity == 1) return false;
-                if (item.id === payload && item.quantity > 1) item.quantity -= 1;
-                return item;
-            });
+            return order.filter(item => item.id !== payload);
 
         default:
             return order;
