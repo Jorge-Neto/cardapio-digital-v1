@@ -46,9 +46,7 @@ export const OnSaleConditions = () => {
       </div>
       {openModal && (
         <div
-          className={`w-10/12 h-auto bg-white hover:bg-gray-50 border overflow-y-scroll shadow-lg rounded-lg py-3 cursor-pointer ${
-            openModal ? "fixed top-1/3" : ""
-          }`}
+          className="fixed top-1/3 w-10/12 max-w-sm h-auto bg-white hover:bg-gray-50 border overflow-y-scroll shadow-lg rounded-lg py-3 cursor-pointer"
           onClick={() => setOpenModal(false)}
         >
           <div className="w-full flex">
