@@ -5,7 +5,7 @@ export const Footer = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="tel:+5541996811846"
+          href="tel:+55419999999"
           className="flex items-center gap-1 decoration-none"
         >
           <svg

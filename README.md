@@ -19,7 +19,7 @@ Next.js 14 (App Router), React 18, TypeScript e Tailwind CSS 3. O estado da saco
 
 ## Executar localmente
 
-Pré-requisitos: Node.js 18.17 ou superior e npm. Para executar a suíte de testes, use Node.js 20 ou superior.
+Pré-requisitos: Node.js 18.17 ou superior e npm.
 
 ```bash
 npm ci
@@ -28,7 +28,7 @@ npm ci
 Crie um arquivo `.env.local` na raiz do projeto e configure o número que receberá os pedidos, com código do país e DDD, usando somente dígitos:
 
 ```dotenv
-NEXT_PUBLIC_PHONE_NUMBER=5541996811846
+NEXT_PUBLIC_PHONE_NUMBER=55419999999
 ```
 
 Essa variável é pública e usada para montar o link do WhatsApp. Reinicie o servidor ao alterá-la; em produção, configure-a antes de gerar o build.
@@ -41,14 +41,13 @@ Acesse [http://localhost:3000](http://localhost:3000).
 
 ## Comandos
 
-| Comando | Finalidade |
-| --- | --- |
-| `npm run dev` | Iniciar o servidor de desenvolvimento. |
-| `npm run build` | Gerar o build de produção. Requer acesso ao Google Fonts para baixar a fonte Inter. |
-| `npm start` | Servir o build de produção, após executar `npm run build`. |
-| `npm run lint` | Verificar o código com ESLint e as regras do Next.js. |
-| `npx tsc --noEmit` | Verificar os tipos TypeScript. |
-| `npm test` | Executar os testes do reducer da sacola com o runner nativo do Node.js. |
+| Comando            | Finalidade                                                                          |
+| ------------------ | ----------------------------------------------------------------------------------- |
+| `npm run dev`      | Iniciar o servidor de desenvolvimento.                                              |
+| `npm run build`    | Gerar o build de produção. Requer acesso ao Google Fonts para baixar a fonte Inter. |
+| `npm start`        | Servir o build de produção, após executar `npm run build`.                          |
+| `npm run lint`     | Verificar o código com ESLint e as regras do Next.js.                               |
+| `npx tsc --noEmit` | Verificar os tipos TypeScript.                                                      |
 
 No PowerShell, se a política de execução bloquear `npm.ps1` ou `npx.ps1`, use `npm.cmd` e `npx.cmd` nos comandos acima.
 
@@ -63,7 +62,6 @@ src/
   types/        Tipos dos pratos e itens do pedido
   utils/        Contagem de unidades, datas e link do WhatsApp
 public/         Imagens e logo
-tests/          Testes do reducer
 ```
 
 - Edite `src/data/foodList.ts` para alterar pratos, descrições e categorias. Mantenha os IDs únicos e as categorias alinhadas com `src/components/FilterButtons.tsx`.
