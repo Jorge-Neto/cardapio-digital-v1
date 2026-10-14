@@ -1,4 +1,4 @@
-import { OrderListItem } from "@/types/OrderListItem";
+import type { OrderListItem } from "@/types/OrderListItem";
 
 type AddAction = {
     type: 'add';
@@ -9,39 +9,35 @@ type EditAction = {
     type: 'edit';
     payload: {
         id: number,
-        operation: string
+        operation: 'increment' | 'decrement'
     };
 }
 
-type RemovedAction = {
+type RemoveAction = {
     type: 'remove';
     payload: number;
 }
 
-type ListActions = AddAction | EditAction | RemovedAction;
+type OrderAction = AddAction | EditAction | RemoveAction;
 
-export const orderReducer = (order: OrderListItem[], { type, payload }: ListActions) => {
-    switch (type) {
+export const orderReducer = (order: OrderListItem[], action: OrderAction,): OrderListItem[] => {
+    switch (action.type) {
 
         case "add":
-            return [...order, payload];
+            return [...order, action.payload];
 
         case "edit":
-            let { id, operation } = payload
-            return order.filter(item => {
-                if (item.id === id) {
-                    if (operation === "increment") item.quantity += 1;
-                    if (operation === "decrement") item.quantity -= 1;
-                }
-                return item;
+            return order.map(item => {
+                if (item.id !== action.payload.id) return item;
+
+                const delta = action.payload.operation === "increment" ? 1 : -1;
+                return { ...item, quantity: Math.max(1, item.quantity + delta) };
             });
 
         case "remove":
-            return order.filter(item => item.id !== payload);
+            return order.filter(item => item.id !== action.payload);
 
         default:
             return order;
     }
-
-
 }
